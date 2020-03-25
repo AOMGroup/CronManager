@@ -1,0 +1,28 @@
+{
+  "name": "aomgroup/php-cm",
+  "authors": [
+    {
+      "name": "Noramarth",
+      "email": "noramarth@aom.ro"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "ext-igbinary": "*",
+    "ext-memcached": "*",
+    "ext-pdo_mysql": "*",
+    "ext-redis": "*",
+    "ext-pdo": "*",
+    "ext-pcntl": "*",
+    "ext-posix": "*",
+    "php-di/php-di": "^6.0",
+    "react/event-loop": "^1.1.1",
+    "monolog/monolog": "^2.0.0",
+    "dragonmantank/cron-expression": "^2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "AOM\\CronManager\\": "src/"
+    }
+  }
+}

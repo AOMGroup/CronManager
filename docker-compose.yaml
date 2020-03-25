@@ -1,0 +1,31 @@
+version: '3.5'
+
+services:
+
+  database:
+    container_name: "aom-cm-db"
+    image: mysql:5.7
+    ports:
+      - 3307:3306
+    networks:
+      - aom-cron-network
+    volumes:
+      - /docker/mysql/cron-data/:/var/lib/mysql/
+    environment:
+      - "MYSQL_ROOT_PASSWORD=jk0544x"
+
+  crons:
+    container_name: "aom-cm-app"
+    image: aomgroup/cli-base:api-dev-latest
+    ports:
+      - 8001:80
+    networks:
+      - aom-cron-network
+    volumes:
+      - .:/app
+    command: ['php', '/app/start.php']
+    depends_on:
+      - database
+
+networks:
+  aom-cron-network:
