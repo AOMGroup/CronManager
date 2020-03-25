@@ -12,7 +12,7 @@ services:
     volumes:
       - /docker/mysql/cron-data/:/var/lib/mysql/
     environment:
-      - "MYSQL_ROOT_PASSWORD=jk0544x"
+      - "MYSQL_ROOT_PASSWORD=xxxxxx"
 
   crons:
     container_name: "aom-cm-app"

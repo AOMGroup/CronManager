@@ -4,7 +4,7 @@ return [
     'database' => [
         'dsn' => 'mysql:host=database;dbname=crons',
         'user' => 'root',
-        'pass' => 'jk0544x',
+        'pass' => 'xxxxxxxxx',
         'options' => [
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
